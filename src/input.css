@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+
+
+.weather-card{
+  @apply border-none  border-blue-400 outline-0 rounded-xl mx-8 my-16 p-8 ;
+}
+
+.search-icon{
+  @apply max-w-8 bg-white rounded-xl p-2 cursor-pointer
+}
+
+.search-city{
+  @apply p-2 border-0 outline-white outline-1 w-64 rounded-xl
+}
+
+.city-status-image{
+  @apply w-16 h-16
+}
