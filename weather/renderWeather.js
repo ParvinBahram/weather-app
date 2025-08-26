@@ -4,7 +4,7 @@ import WeatherUi from "./weatherUi.js";
 
 export default class RenderWeather{
     constructor(apiKey){
-        this.api = new FetchWeather(apiKey);
+        this.fetch = new FetchWeather(apiKey);
         this.ui = new WeatherUi();
         this.searchCity=document.querySelector(".search-city");
         this.searchBtn = document.querySelector(".search-btn");
@@ -18,11 +18,11 @@ export default class RenderWeather{
     async renderSearch(){
         const city = this.searchCity.value.trim();
         if (!city) return ;
-        const data = await this.api.getWeather(city);
+        const data = await this.fetch.getWeather(city);
         console.log(data);
         this.searchCity.value = "";
         if(data) {
-            this.ui.displayWeather(data)
+            this.ui.displayWeather(this.fetch)
         };
 
     }

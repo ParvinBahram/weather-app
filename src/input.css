@@ -3,7 +3,7 @@
 
 
 .weather-card{
-  @apply border-none  border-blue-400 outline-0 rounded-xl mx-8 my-16 p-8 ;
+  @apply border-none  outline-0 rounded-xl mx-8 my-16 p-10   ;
 }
 
 .search-btn{
