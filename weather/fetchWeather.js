@@ -52,4 +52,11 @@ export default class FetchWeather{
     getWind(){
         return this.data?.wind?.speed ?? "-"
     }
+
+    getSunrise(){
+        return this.data?.sys?.sunrise ?? "-"
+    }
+    getSunset(){
+        return this.data?.sys?.sunset ?? "-"
+    }
 }

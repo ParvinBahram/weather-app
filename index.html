@@ -8,30 +8,48 @@
 </head>
 <body class="">
   <div class="max-w-5xl mx-auto ">
-    <div class="weather-card bg-gradient-to-t from-blue-500 to-blue-300 ">
+    <div class="weather-card bg-gradient-to-b from-blue-200  to-green-200 ">
       <div class="card-header flex justify-center gap-x-4 mb-8">
         <input type="text" placeholder="search city" class="search-city" >
         <img src="./assets/images/search.svg" alt="search-icon" class="search-btn">
       </div>
-      <div class="card-main mb-8 flex flex-col md:flex-row justify-between gap-4 items-center">
+      <div class="card-main mb-8 p-4 flex flex-col md:flex-row rounded-3xl shadow-md justify-between gap-4 items-center">
+        <div class="date-time flex justify-between gap-6 my-4">
+          <h3 class="date text-xl ">Oct 07 2025</h3>
+          <h3 class="time text-xl ">15:30🕑</h3>
+        </div>
         <div class="">
           <h3 class="city-name text-xl font-bold text-center">Tehran</h3>
-            <span class="weather-status block text-sm text-center">sunny</span>
+            <p class="weather-status text-lg block text-sm text-center">sunny</p>
         </div>
         <div class="flex flex-col items-center md:flex-row justify-start gap-4">
           <img src="./assets/images/Clear.svg" alt="sunny" class="weather-status-image ">
           <h3 class="temperature text-lg font-bold ">38C°</h3>
         </div>
       </div>
-      <div class="card-footer flex justify-between items-center mb-8 flex-wrap">
-        <div class="humidity flex flex-col justify-center items-center">
+      <div class="card-footer grid grid-cols-2 grid-rows-2 gap-2 md:flex justify-around items-center mb-10 flex-wrap">
+         <div class="sunrise flex flex-col justify-center md:p-8 md:border-none items-center rounded-xl shadow-lg pb-6">
+          <div class="flex justify-center items-center gap-x-2">
+            <img src="./assets/images/sunrise-svgrepo-com.svg" alt="sunrise" class="sunrise-icon w-10 h-10">
+            <p class="sunrise-time">05:29</p>
+          </div>
+          <div class="font-bold"><S></S>Sunrise</div>
+         </div>
+         <div class="sunset flex flex-col justify-center md:p-8 md:border-none items-center rounded-xl shadow-lg pb-6">
+          <div class="flex justify-center items-center gap-x-2">
+            <img src="./assets/images/sunset-svgrepo-com.svg" alt="sunset" class="sunset-icon w-10 h-10 ">
+            <p class="sunset-time">18:50</p>
+          </div>
+          <div class="font-bold">Sunset</div>
+        </div>
+        <div class="humidity flex flex-col md:border-none md:p-8 justify-center items-center rounded-xl shadow-lg pt-4 pb-6">
           <div class="flex justify-center items-center gap-x-2">
             <img src="./assets/images/humidity.svg" alt="humidity" class="humidity-icon w-10 h-10 ">
             <p class="humidity-per">2%</p>
           </div>
           <div class="font-bold">Humidity</div>
         </div>
-        <div class="wind flex flex-col justify-center items-center w-30">
+        <div class="wind flex flex-col   justify-center md:p-8 items-center pt-4 rounded-xl shadow-lg pb-6">
           <div class="flex justify-center items-center gap-x-2">
             <img src="./assets/images/wind.svg" alt="wind" class="wind-icon w-10 h-10 ">
             <p class="wind-speed">8km/h</p>
@@ -41,7 +59,7 @@
       </div>
     </div>
   </div>
-  <script type="module" src="./script.js"></script>
+  <script type="module" src="./main.js"></script>
 
 </body>
 </html>

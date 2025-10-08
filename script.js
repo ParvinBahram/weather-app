@@ -23,7 +23,7 @@ const getWeather = async function(cityName){
         return response.json();
     } catch (err) {
         console.log(err.message)
-        // alert(err.message)
+        alert(err.message)
     }
 }
 

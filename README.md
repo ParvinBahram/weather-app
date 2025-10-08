@@ -1,8 +1,8 @@
 
 # Weather App ☀️🌧
-![GitHub repo size](https://img.shields.io/github/repo-size/ParvinBahram/wheather-app)
- ![GitHub stars](https://img.shields.io/github/stars/ParvinBahram/wheather-app)
- ![GitHub forks](https://img.shields.io/github/forks/ParvinBahram/wheather-app)
+![GitHub repo size](https://img.shields.io/github/repo-size/ParvinBahram/weather-app)
+ ![GitHub stars](https://img.shields.io/github/stars/ParvinBahram/weather-app)
+ ![GitHub forks](https://img.shields.io/github/forks/ParvinBahram/weather-app)
 
  #### *A weather app built using JavaScript and API*
 
@@ -18,14 +18,14 @@
 
 
 ## Introduction
- This app displays the weather information for cities around the world. Enter the city name in the search bar and click the search button to get details such as temperature, weather conditions, wind speed, and humidity percentage.
+ This app displays the weather information for cities around the world. Enter the city name in the search bar and click the search button or Enter to get details such as temperature, weather conditions, wind speed, humidity percentage, sunrise and sunset time , date and time.
 
 The app uses the OpenWeather API : [ OpenWeather ](https://openweathermap.org)
 
 ## Installation
  1- Clone the repository  
   ```bash
-  git clone https://github.com/ParvinBahram/wheather-app.git
+  git clone https://github.com/ParvinBahram/weather-app.git
   ```
 
  2- Be sure Node.js is installed on your system.
@@ -51,6 +51,9 @@ npm run dev
 
 2- Case-insensitive city search, it works correctly whether letters are uppercase or lowercase.
 
+3- whether you search in Persian or in English, the result is correct.
+
+4- By searching for a city, you can see the **local time** along with weather info.
 
 
 ## Technologies Used
@@ -60,12 +63,8 @@ npm run dev
 ![app image](./assets/images/weather-app.PNG)
 
 
-## Roadmap
-I am going to extend the app by adding local time, date, and animation features.
-
 ## License
 No license restrictions — free to use for everyone.
 
 ## Contact
-
 📧 Email: example@email.com

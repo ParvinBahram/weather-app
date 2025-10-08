@@ -1,6 +1,7 @@
 
 import FetchWeather from "./fetchWeather.js";
 import WeatherUi from "./weatherUi.js";
+import DateTime from "./dateTime.js";
 
 export default class RenderWeather{
     constructor(apiKey){
@@ -12,7 +13,14 @@ export default class RenderWeather{
     }
 
     addEventListeners(){
-        this.searchBtn.addEventListener("click",() => this.renderSearch())
+        this.searchBtn.addEventListener("click",() => this.renderSearch());
+
+        this.searchCity.addEventListener("keydown", (e)=>{
+            if(e.key === "Enter"){
+            this.renderSearch();
+            }
+        });
+
     }
 
     async renderSearch(){
@@ -20,9 +28,15 @@ export default class RenderWeather{
         if (!city) return ;
         const data = await this.fetch.getWeather(city);
         console.log(data);
+        console.log("Timezone:", data?.timezone)
         this.searchCity.value = "";
         if(data) {
-            this.ui.displayWeather(this.fetch)
+            const dateTime = new DateTime(this.fetch.data.timezone) ;
+
+            const date = dateTime.getLocalDate();
+            const time = dateTime.getLocalTime();
+
+            this.ui.displayWeather(this.fetch,date, time)
         };
 
     }
